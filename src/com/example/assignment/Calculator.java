@@ -88,7 +88,7 @@ public class Calculator extends ActionBarActivity {
     	perform();
     	op = '-';
     }
-    public void btnMulClicked(View v){//prevent complex expression
+    public void btnMultiClicked(View v){//prevent complex expression
     	if(op != 'q'){
     		calculate();
     	}
