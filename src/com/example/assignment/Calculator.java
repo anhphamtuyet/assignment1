@@ -6,11 +6,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class Calculator extends ActionBarActivity {
 	public String str = "";
 	Character op = 'q';
+	private MyApp myApp;
+	private TextView textView;
+	
 	//numtemp: store first number value in an expression
 	//num: store second number
 	float num = 0, numtemp = 0;
@@ -20,6 +24,11 @@ public class Calculator extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+        
+        //test by Xiuming
+        textView = (TextView)this.findViewById(R.id.msg);
+        myApp = (MyApp)getApplication();
+        textView.setText("--switch now->>>" + myApp.getName());
         
         result = (EditText) findViewById(R.id.editText1);
         result.setText("");
